@@ -1,0 +1,121 @@
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+#footer {
+    position:fixed;
+    bottom:0;
+    right: 0;
+    margin-right: 5px;
+    font-size: 10pt;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 97%;
+    width: 97%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 500px;
+}
+
+.timer span{
+    font-size: 25pt;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+span.timer-alert {
+    color: red;
+}
+
+span.timer-warning {
+    color: orange;
+}
+
+.timer span:-webkit-full-screen {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer span:-moz-full-screen {
+    color: white;
+    background: black;
+    font-weight: bold;
+    font-size: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:-webkit-full-screen seconds {
+    font-size: 15vw;
+}
+
+:-moz-full-screen seconds {
+    font-size: 15vw;
+}
+
+span.timer-alert:-webkit-full-screen {
+    color: black;
+    background: red;
+}
+
+span.timer-warning:-webkit-full-screen {
+    color: orange;
+    background: black;
+}
+
+span.timer-warning:-moz-full-screen {
+    color: orange;
+    background: black;
+}
+
+span.timer-alert:-moz-full-screen {
+    color: black;
+    background: red;
+}
+
+kbd {
+    display: inline-block;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #242729;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #e1e3e5;
+    border: 1px solid #adb3b9;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+    white-space: nowrap;
+}
+
+:-webkit-full-screen {
+	position: fixed;
+	width: 100%;
+    height: 100%;
+	top: 0;
+}
