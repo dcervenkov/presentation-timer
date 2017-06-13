@@ -1,6 +1,20 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-align: center;
+    overflow-y: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    -o-user-select:none;
+}
+
+p {
+    line-height: 3;
+}
+
+.footnote {
+    font-size: small;
+    color: grey;
 }
 
 #footer {
@@ -87,6 +101,11 @@ span.timer-warning:-webkit-full-screen {
     background: black;
 }
 
+span.timer-paused:-webkit-full-screen {
+    color: gray;
+    background: black;
+}
+
 span.timer-warning:-moz-full-screen {
     color: orange;
     background: black;
@@ -95,6 +114,11 @@ span.timer-warning:-moz-full-screen {
 span.timer-alert:-moz-full-screen {
     color: black;
     background: red;
+}
+
+span.timer-paused:-moz-full-screen {
+    color: gray;
+    background: black;
 }
 
 kbd {
