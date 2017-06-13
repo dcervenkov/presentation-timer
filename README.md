@@ -1,6 +1,6 @@
 # Presentation Timer
 
-A browser based timer useful mainly for presentations. It provides a simple uncluttered interface that is controlled by a couple of keyboard keys. It requires a fairly modern browser as it uses HTML5's fullscreen API.
+A browser based timer useful mainly for presentations. It provides a simple uncluttered interface that is controlled either by a couple of keyboard keys or touchscreen gestures. It requires a fairly modern browser as it uses HTML5's fullscreen API.
 
 ### Usage
 
