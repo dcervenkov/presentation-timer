@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <script type="text/javascript" src="timer.js"></script>
     <meta charset="UTF-8">
     <title>Presentation Timer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+  </head>
 
-<body onload="createTimer('mainTimer'); displayCorrectHelp();">
-
+  <body onload="createTimer('mainTimer'); displayCorrectHelp();">
     <div class="outer">
-        <div class="middle">
-            <div class="inner">
-                <h2>Presentation Timer</h2>
+      <div class="middle">
+        <div class="inner">
+          <h2>Presentation Timer</h2>
 
-                <div class="timer" id="mainTimer"></div>
+          <div class="timer" id="mainTimer"></div>
 
-                <p class='keyboard'>
-                    Press <kbd>Space</kbd> to start and stop the timer.<br>
-                    Use <kbd>↑</kbd><kbd>↓</kbd> to add and subtract minutes from the timer.<br>
-                    Press <kbd>R</kbd> to reset the timer.<br>
-                </p>
+          <p class='keyboard'>
+            Press <kbd>Space</kbd> to start and stop the timer.<br>
+            Use <kbd>↑</kbd><kbd>↓</kbd> to add and subtract minutes from the timer.<br>
+            Press <kbd>R</kbd> to reset the timer.<br>
+          </p>
+          <p class='touch'>
+            <b>Tap</b> to start and stop the timer.<br>
+            <b>Swipe</b> up and down to add and subtract minutes from the timer.<br>
+            <b>Tap and hold</b> to reset the timer.<br>
+          </p>
 
-                <p class='touch'>
-                    <b>Tap</b> to start and stop the timer.<br>
-                    <b>Swipe</b> up and down to add and subtract minutes from the timer.<br>
-                    <b>Tap and hold</b> to reset the timer.<br>
-                </p>
+          <!-- The onmousedown and onclick properties are to make sure
+            the checkbox doesn't steal focus. 'Space' wouldn't start
+            and stop the timer if it would. -->
+          <label onmousedown="event.preventDefault"
+            onclick="
+            if (this === event.target) {
+            // Prevent focus and click
+            event.preventDefault();
+            // Call click on the labeled control
+            this.control && this.control.click();
+            }">
+          <input type="checkbox"
+            onmousedown="event.preventDefault()"
+            id="fullscreenToggle"
+            role="switch" checked
+            />
+          Fullscreen on start
+          </label>
 
-                <!-- The onmousedown and onclick properties are to make sure
-                    the checkbox doesn't steal focus. 'Space' wouldn't start
-                   and stop the timer if it would. -->
-                <label onmousedown="event.preventDefault"
-                   onclick="
-                    if (this === event.target) {
-                      // Prevent focus and click
-                      event.preventDefault();
-                      // Call click on the labeled control
-                      this.control && this.control.click();
-                    }">
-                  <input type="checkbox"
-                    onmousedown="event.preventDefault()"
-                    id="fullscreenToggle"
-                    role="switch" checked
-                  />
-                  Fullscreen on start
-                </label>
+          <div class="footnote" id="topFootnote">
+            <p class='keyboard'>
+              Presentation Timer also works with touch-only devices. Just visit this webpage.
+            </p>
+            <p class='touch'>
+              Presentation Timer also works with non-touch devices. Just visit this webpage.
+            </p>
+          </div>
 
-                <div class="footnote" id="topFootnote">
-                    <p class='keyboard'>
-                        Presentation Timer also works with touch-only devices. Just visit this webpage.
-                    </p>
-                    <p class='touch'>
-                        Presentation Timer also works with non-touch devices. Just visit this webpage.
-                    </p>
-                </div>
-
-                <div id="statusDiv" class='footnote'></div>
-            </div>
+          <div id="statusDiv" class='footnote'></div>
         </div>
+      </div>
     </div>
     <div id="footer"><a href="https://github.com/dcervenkov/presentation-timer">Made by DC</a></div>
-</body>
-
-<script type="text/javascript" src="wakelock.js"></script>
+  </body>
+  <script type="text/javascript" src="wakelock.js"></script>
 </html>
