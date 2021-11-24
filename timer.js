@@ -26,7 +26,9 @@ function Timer(elem) {
    * Start the timer.
    */
   function start() {
-    fullScreen();
+    if (document.getElementById("fullscreenToggle").checked) {
+        fullScreen();
+    }
     if (!interval) {
       lastPollTime = Date.now();
       interval = setInterval(update, 1000);
@@ -326,11 +328,15 @@ function createTimer(timerId) {
  * Hide one of the help paragraphs depending on what type of device we are.
  */
 function displayCorrectHelp() {
-  let keyboardHelp = document.getElementById('keyboard');
-  let touchHelp = document.getElementById('touch');
+  let keyboardHelp = document.getElementsByClassName('keyboard');
+  let touchHelp = document.getElementsByClassName('touch');
   if (mobileAndTabletcheck() == true) {
-    keyboardHelp.style.display = 'none';
+    for (var i = 0; i < keyboardHelp.length; i++) {
+        keyboardHelp[i].style.display = 'none';
+    }
   } else {
-    touchHelp.style.display = 'none';
+    for (var i = 0; i < keyboardHelp.length; i++) {
+        touchHelp[i].style.display = 'none';
+    }
   }
 }

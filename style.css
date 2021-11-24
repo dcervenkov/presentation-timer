@@ -17,6 +17,10 @@ p {
     color: grey;
 }
 
+#topFootnote {
+    margin-top: 5em;
+}
+
 #footer {
     position:fixed;
     bottom:0;
