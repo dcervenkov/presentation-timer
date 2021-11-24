@@ -59,6 +59,10 @@ p {
     font-weight: bold;
 }
 
+span.timer-paused {
+    color: gray;
+}
+
 span.timer-alert {
     color: red;
 }
